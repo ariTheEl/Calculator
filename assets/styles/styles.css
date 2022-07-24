@@ -4,8 +4,9 @@
     border-radius: 10px;
     display: grid;
     justify-content: center;
-    margin: 150px;
+    margin: 0 auto;
     background-color: #efe999;
+    box-shadow: 8px 8px 3px rgba(00, 00, 00, 0.8);
 }
 @media screen and (min-width:400px){
     .container{
@@ -16,22 +17,41 @@
     
 }
 .display{
-    width: auto;height: 45px;
+    text-align: right;
+    line-height: 80px;
+    padding: 0 10px;
+    font-size: large;
+    font-weight: 800;
+    width: auto;
+    height: 45px;
     border-radius: 15px;
-    border:1px outset #000;
+    box-shadow: 4px 3px 2px inset rgba(00,00,00,0.5);
     margin: 5px 5px;
 }
 .row{
     margin: 5px 5px;
 }
 button{
+    box-shadow: 4px 3px 5px rgba(00,00,00,0.5);
     width: 12vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: larger;
-    background-color: #000;
-    color: #efe999;
-    border: 2px #ffffff outset;
+    font-size:large;
+    font-weight: 900;
+    background:linear-gradient(to top, #000, #efe999);
+    color: #000;
+    border: 2px #efe999 outset;
     border-radius: 50px;
     padding: 8px;
+    cursor: pointer;
     margin: 4px 4px;
+}
+button:hover{
+    background:linear-gradient(to bottom, #000, #efe999);
+    color: #efe999;
+    border: 2px #000 inset;
+    border-radius: 10px;
+    transition: 600ms ease-in-out;
+}
+.decimalBtn{
+    float: right;
 }
