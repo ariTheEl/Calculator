@@ -50,8 +50,20 @@ button:hover{
     color: #efe999;
     border: 2px #000 inset;
     border-radius: 10px;
-    transition: 600ms ease-in-out;
+    transition: 100ms ease-in-out;
 }
-.decimalBtn{
+.operator:hover{
+     box-shadow: 4px 3px 5px rgba(00,00,00,0.5);
+    background:linear-gradient(to left, #f00,#000);
+    color: #000;
+    border: 2px #000 outset;
+}
+.equals:hover{
+    background: #f00;
+    color: #000;
+    box-shadow: 4px 3px 5px rgba(00,00,00);
+    border: 2px #000 outset;
+}
+#decimalBtn{
     float: right;
 }

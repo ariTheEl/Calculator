@@ -1,21 +1,57 @@
-let container=document.querySelector('.container')
-let display=document.querySelector('.display');
-let button=Array.from(document.querySelectorAll('button'));
+function addOperator(a,b) {
+    return(a+b) 
+}
 
-button.map(btn => {
-    btn.addEventListener('click', evt => {
-        if (evt.target.innerText=='C') {
-            display.innerText=display.innerText.slice(0,-1);
-        }
-    
-        else if (evt.target.innerText=='AC'){
-            display.innerText=" ";
-        }
-        else if(evt.target.innerText=='='){
-            display.innerText=eval(display.innerText)
-        }
-        else {
-            display.innerText += evt.target.innerText;
-        }
-    })
-})
+function subtractOperator(a,b) {
+    return(a-b) 
+}
+
+function multiplyOperator(a,b) {
+    return(a*b) 
+}
+
+function divideOperator(a,b) {
+    return(a/b) 
+}
+
+function operate (m,x,n) {
+    if (x="+") {
+        addOperator(m,n)
+    }
+    else if  (x="-") {
+        subtractOperator(m,n)
+    }
+    else if  (x="*") {
+        multiplyOperator(m,n)
+    }
+     else if  (x="/") {
+        divideOperator(m,n)
+    }
+}
+
+
+function populateDisplay () {
+    let display=document.querySelector('.display');
+    let numBtn=Array.from(document.querySelectorAll('.numberBtn'));
+    let displayValue= numBtn.map(btn => { btn.addEventListener('click', evt => display.innerText += evt.target.innerText)} )}
+
+    populateDisplay()
+
+let display=document.querySelector('.display');
+let allClear=document.querySelector("#allClear");
+allClear.addEventListener('click', ()=> { 
+        display.innerText=" "
+    });
+
+let clear =document.querySelector("#clear");
+clear.addEventListener('click', ()=> { 
+    display.innerText=display.innerText.slice(0,-1)
+});
+//
+let decimalBtn=document.querySelector("#decimalBtn")
+if (display.innerText.includes()==true) {
+    decimalBtn.disabled='true'
+}
+
+
+
